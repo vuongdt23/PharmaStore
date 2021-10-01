@@ -10,6 +10,7 @@
   "author": "dtv23",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "express": "^4.17.1",
     "mongoose": "^6.0.7",
     "passport": "^0.5.0",

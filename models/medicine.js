@@ -7,11 +7,19 @@ const medicineModel = new Schema({
     type: String,
   },
   medicinePrice: Number,
+  medicineInstock: Number,
   medicineUnit: {
-      type: mongoose.Types.ObjectId, ref: "medicineUnit"
-  }
+    type: mongoose.Types.ObjectId,
+    ref: "medicineUnit",
+  },
+  medicineProvider: {
+    type: mongoose.Types.ObjectId,
+    ref: "medicineProvider",
+  },
+  medicineManufacturer: {
+    type: mongoose.Types.ObjectId,
+    ref: "medicineManufacturer",
+  },
 });
-
-
 
 module.exports = mongoose.model("medicine", medicineModel);
