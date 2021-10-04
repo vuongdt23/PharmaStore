@@ -1,0 +1,20 @@
+doctype html
+
+html(lang='en')
+  body
+    table.table.table-striped
+      tr
+        th Name
+        th Provider
+        th Manufaturer
+        th Price
+        th Id
+       
+
+      each n in medList
+        tr
+          td= n.medicineName
+          td= n.medicineProvider
+          td= n.medicineManufacturer
+          td= n.medicinePrice
+          td= n._id

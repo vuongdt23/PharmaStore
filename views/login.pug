@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+head
+    title Pharma &mdash; Colorlib Template
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    link(href='https://fonts.googleapis.com/css?family=Rubik:400,700|Crimson+Text:400,400i' rel='stylesheet')
+    link(rel='stylesheet' href='fonts/icomoon/style.css')
+    link(rel='stylesheet' href='css/bootstrap.min.css')
+    link(rel='stylesheet' href='css/magnific-popup.css')
+    link(rel='stylesheet' href='css/jquery-ui.css')
+    link(rel='stylesheet' href='css/owl.carousel.min.css')
+    link(rel='stylesheet' href='css/owl.theme.default.min.css')
+    link(rel='stylesheet' href='css/aos.css')
+    link(rel='stylesheet' href='css/style.css')
+.site-wrap
+    .site-navbar.py-2
+        .search-wrap
+            .container
+                a.search-close.js-search-close(href='#')
+                    span.icon-close2
+                form(action='#' method='post')
+                    input.form-control(type='text' placeholder='Search keyword and hit enter...')
+        .container
+            .d-flex.align-items-center.justify-content-between
+                .logo
+                    .site-logo
+                        a.js-logo-clone(href='index.html') Pharmastore
+                .main-nav.d-none.d-lg-block
+                    nav.site-navigation.text-right.text-md-center(role='navigation')
+                        ul.site-menu.js-clone-nav.d-none.d-lg-block
+                            li.active
+                                a(href='index.html') Home
+                            li
+                                a(href='shop.html') Store
+                            li.has-children
+                                a(href='#') Dropdown
+                                ul.dropdown
+                                    li
+                                        a(href='#') Supplements
+                                    li.has-children
+                                        a(href='#') Vitamins
+                                        ul.dropdown
+                                            li
+                                                a(href='#') Supplements
+                                            li
+                                                a(href='#') Vitamins
+                                            li
+                                                a(href='#') Diet &amp; Nutrition
+                                            li
+                                                a(href='#') Tea &amp; Coffee
+                                    li
+                                        a(href='#') Diet &amp; Nutrition
+                                    li
+                                        a(href='#') Tea &amp; Coffee
+                            li
+                                a(href='about.html') About
+                            li
+                                a(href='contact.html') Contact
+                .icons
+                    a.icons-btn.d-inline-block.js-search-open(href='#')
+                        span.icon-search
+                    a.icons-btn.d-inline-block.bag(href='cart.html')
+                        span.icon-shopping-bag
+                        span.number 2
+                    a.site-menu-toggle.js-menu-toggle.ml-3.d-inline-block.d-lg-none(href='#')
+                        span.icon-menu
+
+    .site-section
+        .container.login-container
+        .row
+            .col-md-6.login-form-1
+            form(action='/login' method='POST')
+                .form-group
+                input.form-control(type='text', name='username' placeholder='Your username',id ="username")
+                .form-group
+                input.form-control(type='password' placeholder='Your Password *',  name="password" id="password" )
+                .form-group
+                input.btnSubmit(type='submit' value='Login')
+                .form-group
+                a.ForgetPwd(href='#') Forget Password?
+                .col-md-6.login-form-2
+
+    footer.site-footer
+        .container
+            .row
+                .col-md-6.col-lg-3.mb-4.mb-lg-0
+                    .block-7
+                        h3.footer-heading.mb-4 About Us
+                        p
+                            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius quae reiciendis distinctio voluptates
+                            | sed dolorum excepturi iure eaque, aut unde.
+                .col-lg-3.mx-auto.mb-5.mb-lg-0
+                    h3.footer-heading.mb-4 Quick Links
+                    ul.list-unstyled
+                        li
+                            a(href='#') Supplements
+                        li
+                            a(href='#') Vitamins
+                        li
+                            a(href='#') Diet &amp; Nutrition
+                        li
+                            a(href='#') Tea &amp; Coffee
+                .col-md-6.col-lg-3
+                    .block-5.mb-5
+                        h3.footer-heading.mb-4 Contact Info
+                        ul.list-unstyled
+                            li.address 203 Fake St. Mountain View, San Francisco, California, USA
+                            li.phone
+                                a(href='tel://23923929210') +2 392 3929 210
+                            li.email emailaddress@domain.com
+            .row.pt-5.mt-5.text-center
+                .col-md-12
+                    p
+                        // Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0.
+                        | Copyright &copy;
+                        script.
+                            document.write(new Date().getFullYear());
+                        |  All rights reserved | This template is made
+                        |               with 
+                        i.icon-heart(aria-hidden='true')
+                        |  by 
+                        a.text-primary(href='https://colorlib.com' target='_blank') Colorlib
+                        // Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0.
+script(src='js/jquery-3.3.1.min.js')
+script(src='js/jquery-ui.js')
+script(src='js/popper.min.js')
+script(src='js/bootstrap.min.js')
+script(src='js/owl.carousel.min.js')
+script(src='js/jquery.magnific-popup.min.js')
+script(src='js/aos.js')
+script(src='js/main.js')
