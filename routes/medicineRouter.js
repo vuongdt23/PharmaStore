@@ -6,3 +6,4 @@ medicineRouter.get("/:medId", medicineController.getMedicineById);
 module.exports = medicineRouter;
 medicineRouter.get("/edit/:medId", medicineController.editPage);
 medicineRouter.post("/edit/:medId", medicineController.medicineEditHandler);
+medicineRouter.get("/delete/:medId", medicineController.deleteById);

@@ -12,7 +12,7 @@ exports.getMedicineById = (req, res, next) => {
     .findById(medId)
     .then((doc) => {
       if (doc) {
-       // console.log(doc);
+        // console.log(doc);
         res.render("medicinePage", { medicine: doc });
       }
       // next();
@@ -48,7 +48,7 @@ exports.editPage = (req, res, next) => {
                 .findById(medId)
                 .then((doc) => {
                   if (doc) {
-                //    console.log(doc);
+                    //    console.log(doc);
                     res.render("editMedicine", {
                       medicine: doc,
                       providerList: providerList,
@@ -77,6 +77,25 @@ exports.editPage = (req, res, next) => {
 };
 exports.medicineEditHandler = (req, res, next) => {
   const medId = req.params.medId;
-
   console.log(req.body);
+  let newMed = {
+    medicineName: req.body.name,
+    medicinePrice: req.body.price,
+    medicineProvider: req.body.provider,
+    medicineUnit: req.body.unit,
+    medicineManufacturer: req.body.manufacturer,
+  };
+
+  medicineModel.findByIdAndUpdate(medId, newMed).then((result) => {
+    //console.log(result)
+    res.redirect("/medicines");
+  });
+  // medicineModel.findByIdAndUpdate(medId)
+};
+
+exports.deleteById = (req, res, next) => {
+  const medId = req.params.medId;
+  medicineModel.findOneAndRemove(medId).then((result) => {
+    res.redirect("/medicines");
+  });
 };
