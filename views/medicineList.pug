@@ -1,7 +1,26 @@
 doctype html
-
-html(lang='en')
+head
+  style.
+    h1 {
+      text-align: center;
+      }
+    table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    }
+    td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    }
+    tr:nth-child(even) {
+    background-color: #dddddd;
+    }
+    
+  title List Medicines
   body
+    h1  List Medicines
     table.table.table-striped
       tr
         th Name
@@ -9,8 +28,7 @@ html(lang='en')
         th Manufaturer
         th Price
         th Id
-       
-
+        th Id Link
       each n in medList
         tr
           td= n.medicineName
@@ -18,3 +36,6 @@ html(lang='en')
           td= n.medicineManufacturer
           td= n.medicinePrice
           td= n._id
+          td
+            a(href="/medicines/medicinePage") #{n.medicineName}
+            

@@ -12,6 +12,9 @@ head
     link(rel='stylesheet' href='css/owl.theme.default.min.css')
     link(rel='stylesheet' href='css/aos.css')
     link(rel='stylesheet' href='css/style.css')
+    link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+    link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+
 .site-wrap
     .site-navbar.py-2
         .search-wrap
@@ -24,14 +27,14 @@ head
             .d-flex.align-items-center.justify-content-between
                 .logo
                     .site-logo
-                        a.js-logo-clone(href='index.html') Pharmastore
+                        a.js-logo-clone(href='/') Pharmastore
                 .main-nav.d-none.d-lg-block
                     nav.site-navigation.text-right.text-md-center(role='navigation')
                         ul.site-menu.js-clone-nav.d-none.d-lg-block
                             li.active
-                                a(href='index.html') Home
+                                a(href='/') Home
                             li
-                                a(href='shop.html') Store
+                                a(href='/stores') Store
                             li.has-children
                                 a(href='#') Dropdown
                                 ul.dropdown
@@ -56,11 +59,13 @@ head
                                 a(href='about.html') About
                             li
                                 a(href='contact.html') Contact
+                            li
+                                a(href='medicines') Medicines     
                 .icons
                     a.icons-btn.d-inline-block.js-search-open(href='#')
-                        span.icon-search
+                        i.fa.fa-search(style='font-size:20px')
                     a.icons-btn.d-inline-block.bag(href='cart.html')
-                        span.icon-shopping-bag
+                        i.fa.fa-shopping-bag(style='font-size:30px')
                         span.number 2
                     a.site-menu-toggle.js-menu-toggle.ml-3.d-inline-block.d-lg-none(href='#')
                         span.icon-menu
@@ -77,7 +82,7 @@ head
                 .form-group
                 input.btnSubmit(type='submit' value='Login')
                 .form-group
-                a.ForgetPwd(href='#') Forget Password?
+                a.ForgetPwd(href='/register') Create A New Account?
                 .col-md-6.login-form-2
 
     footer.site-footer

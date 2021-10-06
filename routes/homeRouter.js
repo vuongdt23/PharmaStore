@@ -10,8 +10,8 @@ const homeRouter = express.Router();
 
 homeRouter.get("/demo", (req, res, next) => {
   let med = new medicineModel({
-    medicineName: "Vicodin",
-    medicinePrice: 500,
+    medicineName: "Bioderma",
+    medicinePrice: 900,
     medicineUnit: "6155c1655b8c7e0aa1c7588c",
     medicineProvider: "61574255526f421be1df053a",
     medicineManufacturer: "61573c683b4ccfce177de4dd",

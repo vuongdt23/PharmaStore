@@ -5,11 +5,13 @@ const storeRouter = require("./routes/storeRouter");
 const homeRouter = require("./routes/homeRouter");
 const loginRouter = require("./routes/loginRouter");
 const medicineRouter = require("./routes/medicineRouter");
+const medicinePageRouter = require("./routes/medicinePageRouter");
 const bodyParser = require("body-parser");
 const passport = require("passport");
 const app = express();
 const config = require("./config/config");
 const mongoose = require("mongoose");
+const registerRouter = require("./routes/registerRouter");
 
 //Register css directory
 app.use(express.static("public"));
@@ -23,8 +25,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use("/", homeRouter);
 app.use("/login", loginRouter);
+app.use("/register",registerRouter);
 app.use("/stores", storeRouter);
 app.use("/medicines", medicineRouter);
+app.use("/medicinePage",medicinePageRouter);
 
 //establish a connection to the MongoDB instance
 mongoose

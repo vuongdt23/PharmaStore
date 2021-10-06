@@ -1,0 +1,56 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    link(rel='icon' type='image/png' href='/images/icons/favicon.ico')
+    link(rel='stylesheet' type='text/css' href='/vendor/bootstrap/css/bootstrap.min.css')
+    link(rel='stylesheet' type='text/css' href='/fonts/font-awesome-4.7.0/css/font-awesome.min.css')
+    link(rel='stylesheet' type='text/css' href='/fonts/Linearicons-Free-v1.0.0/icon-font.min.css')
+    link(rel='stylesheet' type='text/css' href='/vendor/animate/animate.css')
+    link(rel='stylesheet' type='text/css' href='/vendor/css-hamburgers/hamburgers.min.css')
+    link(rel='stylesheet' type='text/css' href='/vendor/animsition/css/animsition.min.css')
+    link(rel='stylesheet' type='text/css' href='/vendor/select2/select2.min.css')
+    link(rel='stylesheet' type='text/css' href='/vendor/daterangepicker/daterangepicker.css')
+    link(rel='stylesheet' type='text/css' href='/css/util.css')
+    link(rel='stylesheet' type='text/css' href='/css/main.css')
+  body
+    header.dxc-header.py-3
+      .row.flex-nowrap.justify-content-between.align-items-center
+        .col-4
+          a.text-muted(href='#')
+            img(src='/images/pharmacy_logo.jpg')
+        .col-4.text-center
+          h2 Create New Account
+        .col-4.d-flex.justify-content-end.align-items-center
+          a.btn.btn-sm.btn-outline-secondary(href='/') Sign out
+    .container
+      form(action='/register' style='margin-top: 15px;' method='POST')
+        .form-group
+          label(for='Account') User Account **
+          input#Account.form-control(type='text' name='username' placeholder='Enter Name Account ' required='')
+        .form-group
+          label(for='Password') User Password **
+          input#Password.form-control(type='password' name='password' placeholder='Enter Password' required='')
+        .form-group
+          label(for='UserName') User Full Name
+          input#UserName.form-control(type='text' name='userfullname' placeholder='Enter User Name' required='')
+        .form-group
+          label(for='DOB') Date Of Birth
+          input#DOB.form-control(type='date' name='userdob' placeholder='Enter Age' required='')
+        .form-group
+          label(for='isAdmin') Role
+          input#Roles.form-control(type='text' name='isadmin' placeholder='Enter Role')
+        .form-group
+          a.btn.btn-info(href='/login') Back To Login Page 
+          a.btn.btn-info(href='/') Back To Home Page 
+          button.btn.btn-success(type='submit') Save
+    script(src='/vendor/jquery/jquery-3.2.1.min.js')
+    script(src='/vendor/animsition/js/animsition.min.js')
+    script(src='/vendor/bootstrap/js/popper.js')
+    script(src='/vendor/bootstrap/js/bootstrap.min.js')
+    script(src='/vendor/select2/select2.min.js')
+    script(src='/vendor/daterangepicker/moment.min.js')
+    script(src='/vendor/daterangepicker/daterangepicker.js')
+    script(src='/vendor/countdowntime/countdowntime.js')
+    script(src='/js/main.js')
