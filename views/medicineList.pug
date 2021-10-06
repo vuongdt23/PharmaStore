@@ -8,13 +8,14 @@ html(lang='en')
         th Provider
         th Manufaturer
         th Price
-        th Id
-       
+        th Edit
+
 
       each n in medList
         tr
           td= n.medicineName
-          td= n.medicineProvider
-          td= n.medicineManufacturer
+          td= n.medicineProvider.medicineProviderName
+          td= n.medicineManufacturer.medicineManufacturerName
           td= n.medicinePrice
-          td= n._id
+          td
+           a(href= "/medicines/edit/" + n._id) Edit
