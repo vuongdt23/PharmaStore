@@ -77,7 +77,7 @@ exports.editPage = (req, res, next) => {
 };
 exports.medicineEditHandler = (req, res, next) => {
   const medId = req.params.medId;
-  console.log(req.body);
+  //console.log(req.body);
   let newMed = {
     medicineName: req.body.name,
     medicinePrice: req.body.price,
@@ -94,8 +94,52 @@ exports.medicineEditHandler = (req, res, next) => {
 };
 
 exports.deleteById = (req, res, next) => {
-  const medId = req.params.medId;
-  medicineModel.findOneAndRemove(medId).then((result) => {
+  //const medId = req.params.medId;
+  console.log(medId);
+  medicineModel.findOneAndRemove({_id: medId}).then((result) => {
     res.redirect("/medicines");
   });
+};
+
+exports.addNewMedicineHandler = (req, res, next) => {
+  let newMed = {
+    medicineName: req.body.name,
+    medicinePrice: req.body.price,
+    medicineProvider: req.body.provider,
+    medicineUnit: req.body.unit,
+    medicineManufacturer: req.body.manufacturer,
+    medicineDescription: req.body.description
+  };
+
+  let med = new medicineModel(newMed).save(result=>{
+    res.redirect("/medicines");
+  })
+};
+exports.addNewMedPage = (req, res, next) => {
+  medicineManufacturerModel
+    .find({})
+    .then((manufacturerList) => {
+      medicineProviderModel
+        .find({})
+        .then((providerList) => {
+          medicineUnitModel
+            .find({})
+            .then((unitList) => {
+              res.render("addMed", {
+                providerList: providerList,
+                manufacturerList: manufacturerList,
+                unitList: unitList,
+              });
+            })
+            .catch((err) => {
+              console.log(err);
+            });
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 };

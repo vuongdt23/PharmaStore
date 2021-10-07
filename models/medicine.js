@@ -7,7 +7,7 @@ const medicineModel = new Schema({
     type: String,
   },
   medicinePrice: Number,
-  medicineInstock: Number,
+  medicineDescription: String,
   medicineUnit: {
     type: mongoose.Types.ObjectId,
     ref: "medicineUnit",

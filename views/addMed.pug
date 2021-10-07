@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+head
+    title Pharma &mdash; Colorlib Template
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    link(href='https://fonts.googleapis.com/css?family=Rubik:400,700|Crimson+Text:400,400i' rel='stylesheet')
+    link(rel='stylesheet' href='../../fonts/icomoon/style.css')
+    link(rel='stylesheet' href='../../css/bootstrap.min.css')
+    link(rel='stylesheet' href='../../css/magnific-popup.css')
+    link(rel='stylesheet' href='../../css/jquery-ui.css')
+    link(rel='stylesheet' href='../../css/owl.carousel.min.css')
+    link(rel='stylesheet' href='../../css/owl.theme.default.min.css')
+    link(rel='stylesheet' href='../../css/aos.css')
+    link(rel='stylesheet' href='../../css/style.css')
+    link(rel='stylesheet' href='../../css/editMedicine.css')
+
+.container
+    .text-center.mt-5
+        h1 Medicine Add Form
+    .row
+        .col-lg-7.mx-auto
+            .card.mt-2.mx-auto.p-4.bg-light
+                .card-body.bg-light
+                    .container
+                        form#contact-form(role='form' action ="/medicines" method ="POST")
+                            .controls
+                                .row
+                                    .col-md-6
+                                        .form-group
+                                            label(for='med_name') Medicine Name *
+                                            input#med_name.form-control(type='text' name='name'  required='required')
+                                    .col-md-6
+                                        .form-group
+                                            label(for='med_price') Price(VND) *
+                                            input#med_price.form-control(type='text' name='price' required='required' )
+                                .row
+                                    .col-md-6
+                                        .form-group
+                                            label(for='med_provider') Medicine Provider *
+                                            select#med_provider.form-control(name='provider' required='required' )
+                                                each prov in providerList
+                                                    option(value=prov._id label =prov.medicineProviderName) 
+                                    .col-md-6
+                                        .form-group
+                                            label(for='med_manufacturer') Medicine Manufacturer *
+                                            select#med_manufacturer.form-control(name='manufacturer' required='required' )
+                                                each maker in manufacturerList
+                                                    option(value=maker._id label =maker.medicineManufacturerName) 
+                                   
+                                .row
+                                    .col-md-12
+                                        .form-group
+                                            label(for='med_unit') Medicine Manufacturer *
+                                            select#med_unit.form-control(name='unit' required='required' )
+                                                each unit in unitList
+                                                    option(value=unit._id label =unit.medicineUnitName) 
+                                    .row
+                                    .col-md-12
+                                        .form-group
+                                            label(for='med_des') Medicine Description
+                                            textarea#med_des.form-control(type='text' name='description'  required='required')                
+                                    .col-md-12
+                                        input.btn.btn-success.btn-send.pt-2.btn-block(type='submit' value='Save')
+                                
+            // /.8
+            // /.row

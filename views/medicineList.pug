@@ -1,16 +1,29 @@
 doctype html
 
 html(lang='en')
-  body
+head
+    title Pharma &mdash; Colorlib Template
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    link(href='https://fonts.googleapis.com/css?family=Rubik:400,700|Crimson+Text:400,400i' rel='stylesheet')
+    link(rel='stylesheet' href='../../fonts/icomoon/style.css')
+    link(rel='stylesheet' href='../../css/bootstrap.min.css')
+    link(rel='stylesheet' href='../../css/magnific-popup.css')
+    link(rel='stylesheet' href='../../css/jquery-ui.css')
+    link(rel='stylesheet' href='../../css/owl.carousel.min.css')
+    link(rel='stylesheet' href='../../css/owl.theme.default.min.css')
+    link(rel='stylesheet' href='../../css/aos.css')
+    link(rel='stylesheet' href='../../css/style.css')
+    link(rel='stylesheet' href='../../css/editMedicine.css')
+body
     table.table.table-striped
       tr
         th Name
         th Provider
         th Manufaturer
         th Price
-        th Edit
-        th Delete
-
+        th Description
+        th Id
 
       each n in medList
         tr
@@ -18,7 +31,11 @@ html(lang='en')
           td= n.medicineProvider.medicineProviderName
           td= n.medicineManufacturer.medicineManufacturerName
           td= n.medicinePrice
+          td= n.medicineDescription
+          td= n._id
           td
            a(href= "/medicines/edit/" + n._id) Edit
           td
            a(href= "/medicines/delete/" + n._id) Delete
+
+    a.btn.btn-primary(href='/medicines/add') Add New Medicine
