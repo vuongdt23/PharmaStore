@@ -32,7 +32,7 @@ head
                                     .col-md-6
                                         .form-group
                                             label(for='med_price') Price(VND) *
-                                            input#med_price.form-control(type='text' name='price' required='required' value= medicine.medicinePrice)
+                                            input#med_price.form-control(type='number' name='price' required='required' value= medicine.medicinePrice)
                                 .row
                                     .col-md-6
                                         .form-group
@@ -50,10 +50,16 @@ head
                                 .row
                                     .col-md-12
                                         .form-group
-                                            label(for='med_unit') Medicine Manufacturer *
+                                            label(for='med_unit') Medicine Unit *
                                             select#med_unit.form-control(name='unit' required='required' )
                                                 each unit in unitList
-                                                    option(value=unit._id label =unit.medicineUnitName) 
+                                                    option(value=unit._id label =unit.medicineUnitName)
+                                .row
+                                    .col-md-12
+                                        .form-group
+                                            label(for='med_des') Medicine Description *
+                                            input#med_des.form-control(type='text' name='price' required='required' value= medicine.medicineDescription)
+                                .row
                                     .col-md-12
                                         input.btn.btn-success.btn-send.pt-2.btn-block(type='submit' value='Save')
             // /.8
